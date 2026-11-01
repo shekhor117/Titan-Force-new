@@ -1,0 +1,6 @@
+{
+  "name": "Titan Force Mulikandi | Official Football Club",
+  "description": "Official website and match center of Titan Force Mulikandi FC from Zakigonj, Sylhet. Squad roster, live fixtures, trophy cabinet, official kit store, and club community.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

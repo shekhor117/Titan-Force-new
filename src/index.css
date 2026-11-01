@@ -1,0 +1,217 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *, [data-theme="dark"], [data-theme="dark"] *));
+
+@layer base {
+  :root {
+    --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    --font-display: 'Barlow Condensed', sans-serif;
+    --font-bengali: 'Noto Sans Bengali', sans-serif;
+  }
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.font-bengali {
+  font-family: var(--font-bengali);
+}
+
+/* ========================================================
+   VIBRANT GRADIENT LIGHT THEME / MODE
+   ======================================================== */
+[data-theme="light"],
+.theme-light {
+  /* Invert neutrals into crisp, high-contrast athletic light surfaces */
+  --color-neutral-950: #f8fafc; /* Crisp base background */
+  --color-neutral-900: #ffffff; /* Card & surface background */
+  --color-neutral-800: #e2e8f0; /* Crisp subtle borders */
+  --color-neutral-700: #cbd5e1; /* Secondary borders & dividers */
+  --color-neutral-600: #94a3b8; /* Muted badges */
+  --color-neutral-500: #64748b; /* Secondary metadata text */
+  --color-neutral-400: #475569; /* Body and subtext */
+  --color-neutral-300: #334155; /* Secondary headings */
+  --color-neutral-200: #1e293b; /* Prominent text */
+  --color-neutral-100: #0f172a; /* Deep obsidian headings */
+  --color-neutral-50:  #020617; /* High-contrast deepest text */
+
+  /* Radiant multi-stop ambient light gradient */
+  background-color: #f8fafc;
+  background-image: 
+    radial-gradient(at 0% 0%, rgba(244, 63, 94, 0.09) 0px, transparent 50%),
+    radial-gradient(at 100% 0%, rgba(245, 158, 11, 0.08) 0px, transparent 50%),
+    radial-gradient(at 50% 50%, rgba(254, 205, 211, 0.12) 0px, transparent 65%),
+    radial-gradient(at 100% 100%, rgba(244, 63, 94, 0.06) 0px, transparent 50%),
+    linear-gradient(145deg, #f8fafc 0%, #fff1f2 35%, #fffbeb 75%, #f8fafc 100%);
+  background-attachment: fixed;
+  color: #0f172a;
+}
+
+/* Radiant gradient card surfaces in light mode */
+.theme-light .bg-neutral-900,
+.theme-light .bg-neutral-900\/90,
+.theme-light .bg-neutral-900\/95,
+.theme-light .bg-neutral-900\/80,
+.theme-light .bg-neutral-900\/70 {
+  box-shadow: 0 4px 20px -2px rgba(225, 29, 72, 0.05), 0 2px 6px -1px rgba(0, 0, 0, 0.04);
+}
+
+/* Soft glowing gradient border on cards in light mode */
+.theme-light .border-neutral-800 {
+  border-color: #e2e8f0;
+}
+
+.theme-light .border-neutral-700 {
+  border-color: #cbd5e1;
+}
+
+/* Hero image soft athletic wash in Light Mode */
+.theme-light .hero-bg-img {
+  opacity: 0.18;
+  filter: saturate(140%) contrast(108%);
+}
+
+/* Headings and Titles contrast mapping in Light Mode */
+.theme-light h1.text-white,
+.theme-light h2.text-white,
+.theme-light h3.text-white,
+.theme-light h4.text-white,
+.theme-light .font-display.text-white,
+.theme-light .text-white:not(
+  .bg-rose-600, .bg-rose-600 *,
+  .bg-rose-500, .bg-rose-500 *,
+  .bg-purple-600, .bg-purple-600 *,
+  .bg-emerald-600, .bg-emerald-600 *,
+  .bg-emerald-500, .bg-emerald-500 *,
+  .bg-amber-500, .bg-amber-500 *,
+  .bg-amber-600, .bg-amber-600 *,
+  .keep-white, .keep-white *,
+  button.bg-rose-600, button.bg-rose-600 *,
+  button.bg-rose-500, button.bg-rose-500 *,
+  button.bg-purple-600, button.bg-purple-600 *
+) {
+  color: #0f172a;
+}
+
+/* Keep white text in primary action buttons and solid color badges */
+.theme-light .bg-rose-600,
+.theme-light .bg-rose-600 *,
+.theme-light .bg-rose-500,
+.theme-light .bg-rose-500 *,
+.theme-light .bg-purple-600,
+.theme-light .bg-purple-600 * {
+  color: #ffffff;
+}
+
+/* Top announcement ribbon vibrant gradient in Light Mode */
+.theme-light .top-ribbon {
+  background: linear-gradient(90deg, #881337 0%, #9f1239 50%, #4c0519 100%) !important;
+  color: #ffffff !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15) !important;
+}
+
+/* Modal Backdrops & Overlays in Light Mode */
+.theme-light .bg-black\/70,
+.theme-light .bg-black\/60,
+.theme-light .bg-black\/80 {
+  background-color: rgba(15, 23, 42, 0.6) !important;
+  backdrop-filter: blur(8px);
+}
+
+/* Input Fields in Light Mode */
+.theme-light input,
+.theme-light textarea,
+.theme-light select {
+  background-color: #ffffff !important;
+  border-color: #cbd5e1 !important;
+  color: #0f172a !important;
+}
+
+.theme-light input::placeholder,
+.theme-light textarea::placeholder {
+  color: #94a3b8 !important;
+}
+
+.theme-light input:focus,
+.theme-light textarea:focus,
+.theme-light select:focus {
+  border-color: #e11d48 !important;
+  box-shadow: 0 0 0 2px rgba(225, 29, 72, 0.15);
+}
+/* Footer styling in Light Mode matching screenshot reference */
+.theme-light footer {
+  background-color: #fbfbfb !important;
+  border-top-color: #f1f5f9 !important;
+}
+
+.theme-light footer a.w-12.h-12 {
+  background-color: #f5ebeb !important;
+  border-color: #eddcdb !important;
+  color: #1f2937 !important;
+}
+
+.theme-light footer a.w-12.h-12:hover {
+  background-color: #fce8e8 !important;
+  color: #e11d48 !important;
+  border-color: #fecdd3 !important;
+}
+
+/* Sidebar Drawer in Light Mode */
+.theme-light aside {
+  background-color: #ffffff !important;
+  border-left-color: #e2e8f0 !important;
+  color: #0f172a !important;
+}
+
+.theme-light aside .bg-neutral-900\/90,
+.theme-light aside .bg-neutral-900\/80,
+.theme-light aside .bg-neutral-900\/70,
+.theme-light aside .bg-neutral-900 {
+  background-color: #f8fafc !important;
+  border-color: #e2e8f0 !important;
+}
+
+.theme-light aside .bg-neutral-950 {
+  background-color: #f1f5f9 !important;
+  border-color: #e2e8f0 !important;
+  color: #0f172a !important;
+}
+
+.theme-light aside button.bg-neutral-900\/70 {
+  background-color: #f8fafc !important;
+  border-color: #e2e8f0 !important;
+  color: #1e293b !important;
+}
+
+.theme-light aside button.bg-neutral-900\/70:hover {
+  background-color: #fff1f2 !important;
+  border-color: #fecdd3 !important;
+  color: #e11d48 !important;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #09090b;
+}
+::-webkit-scrollbar-thumb {
+  background: #27272a;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #e11d48;
+}
+
+.theme-light ::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+.theme-light ::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+.theme-light ::-webkit-scrollbar-thumb:hover {
+  background: #e11d48;
+}
+
