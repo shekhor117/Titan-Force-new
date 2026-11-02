@@ -6,7 +6,7 @@ import { PageView } from './PageHeaderBanner';
 interface FooterProps {
   lang: 'en' | 'bn';
   onScrollToTop: () => void;
-  onNavigate?: (view: PageView) => void;
+  onNavigate?: (view: PageView, filter?: string) => void;
   theme?: 'dark' | 'light';
 }
 
@@ -29,14 +29,28 @@ export const Footer: React.FC<FooterProps> = ({ lang, onScrollToTop, onNavigate,
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, []);
 
-  const handleNav = (e: React.MouseEvent, view: PageView) => {
+  const handleNav = (e: React.MouseEvent, view: PageView, filter?: string, anchorId?: string) => {
     e.preventDefault();
     if (onNavigate) {
-      onNavigate(view);
+      onNavigate(view, filter);
     } else {
-      window.location.hash = view;
+      if (filter) {
+        window.location.hash = filter;
+      } else {
+        window.location.hash = view;
+      }
     }
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+
+    if (anchorId) {
+      setTimeout(() => {
+        const el = document.getElementById(anchorId);
+        if (el) {
+          el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }, 150);
+    } else {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
   };
 
   const navColumns = {
@@ -44,30 +58,30 @@ export const Footer: React.FC<FooterProps> = ({ lang, onScrollToTop, onNavigate,
       titleEn: 'CLUB',
       titleBn: 'ক্লাব',
       links: [
-        { labelEn: 'About', labelBn: 'আমাদের সম্পর্কে', target: 'about' as PageView },
-        { labelEn: 'History', labelBn: 'ঐতিহ্য ও ইতিহাস', target: 'about' as PageView },
-        { labelEn: 'Stadium', labelBn: 'মুলিকান্দি মাঠ', target: 'about' as PageView },
-        { labelEn: 'Academy', labelBn: 'একাডেমি ও ট্রায়াল', target: 'contact' as PageView },
+        { labelEn: 'About', labelBn: 'আমাদের সম্পর্কে', target: 'about' as PageView, filter: 'about' },
+        { labelEn: 'History', labelBn: 'ঐতিহ্য ও ইতিহাস', target: 'about' as PageView, filter: 'history', anchorId: 'history' },
+        { labelEn: 'Stadium', labelBn: 'মুলিকান্দি মাঠ', target: 'about' as PageView, filter: 'stadium', anchorId: 'stadium' },
+        { labelEn: 'Academy', labelBn: 'একাডেমি ও ট্রায়াল', target: 'contact' as PageView, filter: 'academy', anchorId: 'academy' },
       ]
     },
     teams: {
       titleEn: 'TEAMS',
       titleBn: 'দলসমূহ',
       links: [
-        { labelEn: 'Fixtures', labelBn: 'ম্যাচ সূচি', target: 'matches' as PageView },
-        { labelEn: 'Players', labelBn: 'খেলোয়াড় তালিকা', target: 'squad' as PageView },
-        { labelEn: 'Results', labelBn: 'বিগত ফলাফল', target: 'matches' as PageView },
-        { labelEn: 'Standings', labelBn: 'পয়েন্ট টেবিল', target: 'standings' as PageView },
+        { labelEn: 'Fixtures', labelBn: 'ম্যাচ সূচি', target: 'matches' as PageView, filter: 'fixtures' },
+        { labelEn: 'Players', labelBn: 'খেলোয়াড় তালিকা', target: 'squad' as PageView, filter: 'squad' },
+        { labelEn: 'Results', labelBn: 'বিগত ফলাফল', target: 'matches' as PageView, filter: 'results' },
+        { labelEn: 'Standings', labelBn: 'পয়েন্ট টেবিল', target: 'standings' as PageView, filter: 'standings' },
       ]
     },
     connect: {
       titleEn: 'CONNECT',
       titleBn: 'যোগাযোগ',
       links: [
-        { labelEn: 'Contact', labelBn: 'যোগাযোগ ডেস্ক', target: 'contact' as PageView },
-        { labelEn: 'Tickets', labelBn: 'ফ্যান পাস টিকিট', target: 'member-pass' as PageView },
-        { labelEn: 'Shop', labelBn: 'জার্সি ও কিট স্টোর', target: 'store' as PageView },
-        { labelEn: 'Newsletter', labelBn: 'ক্লাব সংবাদ বুলেটিন', target: 'news' as PageView },
+        { labelEn: 'Contact', labelBn: 'যোগাযোগ ডেস্ক', target: 'contact' as PageView, filter: 'contact' },
+        { labelEn: 'Tickets', labelBn: 'ফ্যান পাস টিকিট', target: 'member-pass' as PageView, filter: 'tickets' },
+        { labelEn: 'Shop', labelBn: 'জার্সি ও কিট স্টোর', target: 'store' as PageView, filter: 'store' },
+        { labelEn: 'Newsletter', labelBn: 'ক্লাব সংবাদ বুলেটিন', target: 'news' as PageView, filter: 'news' },
       ]
     }
   };
@@ -152,7 +166,7 @@ export const Footer: React.FC<FooterProps> = ({ lang, onScrollToTop, onNavigate,
                 <li key={idx}>
                   <button
                     type="button"
-                    onClick={(e) => handleNav(e, item.target)}
+                    onClick={(e) => handleNav(e, item.target, item.filter, item.anchorId)}
                     className={`transition-colors text-left cursor-pointer ${
                       isLight 
                         ? 'text-slate-600 hover:text-slate-950 font-medium' 
@@ -176,7 +190,7 @@ export const Footer: React.FC<FooterProps> = ({ lang, onScrollToTop, onNavigate,
                 <li key={idx}>
                   <button
                     type="button"
-                    onClick={(e) => handleNav(e, item.target)}
+                    onClick={(e) => handleNav(e, item.target, item.filter)}
                     className={`transition-colors text-left cursor-pointer ${
                       isLight 
                         ? 'text-slate-600 hover:text-slate-950 font-medium' 
@@ -200,7 +214,7 @@ export const Footer: React.FC<FooterProps> = ({ lang, onScrollToTop, onNavigate,
                 <li key={idx}>
                   <button
                     type="button"
-                    onClick={(e) => handleNav(e, item.target)}
+                    onClick={(e) => handleNav(e, item.target, item.filter)}
                     className={`transition-colors text-left cursor-pointer ${
                       isLight 
                         ? 'text-slate-600 hover:text-slate-950 font-medium' 

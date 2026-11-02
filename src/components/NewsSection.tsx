@@ -54,7 +54,7 @@ export const NewsSection: React.FC<NewsSectionProps> = ({ lang }) => {
               <div
                 key={item.id}
                 onClick={() => setSelectedStory(item)}
-                className="group rounded-xl bg-neutral-900 border border-neutral-800 hover:border-neutral-700 transition-all overflow-hidden flex flex-col justify-between cursor-pointer"
+                className="group rounded-xl bg-neutral-900 border border-neutral-800 card-interactive-glow overflow-hidden flex flex-col justify-between cursor-pointer"
               >
                 {/* Image Frame */}
                 <div className="relative h-48 w-full overflow-hidden bg-neutral-950">

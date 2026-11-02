@@ -110,7 +110,7 @@ export const SupporterPassGenerator: React.FC<SupporterPassProps> = ({ lang }) =
   };
 
   return (
-    <section id="member-pass" className="py-20 bg-neutral-950 border-b border-neutral-800">
+    <section id="member-pass" className="scroll-mt-28 sm:scroll-mt-32 py-16 sm:py-20 bg-neutral-950 border-b border-neutral-800 transition-colors">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}

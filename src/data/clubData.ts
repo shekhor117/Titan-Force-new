@@ -196,7 +196,7 @@ export const PLAYERS_DATA: Player[] = [
     id: 10,
     num: 17,
     name: 'Shekhor',
-    fullName: 'Shekhor Mohan Roy',
+    fullName: 'Shekhor Mohan Ray',
     position: 'CB / RB / DM / CM / RM / LM',
     primaryPosition: 'CB',
     secondaryPositions: ['RB', 'DM', 'CM', 'RM', 'LM'],
@@ -431,7 +431,7 @@ export const PLAYERS_DATA: Player[] = [
     yellowCards: 2,
     redCards: 0,
     photoUrl: '/players/player-5.png',
-    bio: 'Commanding aerial presence and physical anchor in central defense. Formed an impenetrable partnership with Shekhor Mohan Roy.',
+    bio: 'Commanding aerial presence and physical anchor in central defense. Formed an impenetrable partnership with Shekhor Mohan Ray.',
     pitchCoords: { x: 60, y: 72 },
     stats: { pace: 76, shooting: 64, passing: 77, dribbling: 70, defending: 90, physical: 88 },
     detailedStats: {
@@ -836,18 +836,18 @@ export const MATCHES_DATA: Match[] = [
     referee: 'M. Kabir Hossain (Sylhet DFA)',
     weather: '27°C, Sunny & Clear, Wind 8 km/h',
     pitchCondition: 'Natural Grass, Excellent',
-    manOfTheMatch: 'Shekhor Mohan Roy (#17)',
+    manOfTheMatch: 'Shekhor Mohan Ray (#17)',
     notes: 'Historic Championship Victory! Titan Force Mulikandi lifted the Daudpur 2026 trophy in front of 3,500 roaring fans.',
-    editorialReport: 'In an unforgettable championship final at Daudpur Stadium, Titan Force Mulikandi put on a masterclass of defensive grit and surgical counter-attacking football. After a tense first half where goalkeeper Shuronjit Biswas produced two stunning saves, captain Shekhor Mohan Roy seized control of the midfield in the 64th minute, threading an inch-perfect diagonal ball to striker Sajon Biswas who slotted home the winning goal. The Mulikandi defense stood tall until the 95th minute to crown Titan Force the champions of Daudpur.',
+    editorialReport: 'In an unforgettable championship final at Daudpur Stadium, Titan Force Mulikandi put on a masterclass of defensive grit and surgical counter-attacking football. After a tense first half where goalkeeper Shuronjit Biswas produced two stunning saves, captain Shekhor Mohan Ray seized control of the midfield in the 64th minute, threading an inch-perfect diagonal ball to striker Sajon Biswas who slotted home the winning goal. The Mulikandi defense stood tall until the 95th minute to crown Titan Force the champions of Daudpur.',
     goals: [
-      { minute: 64, scorer: 'Sajon Biswas (#9)', assist: 'Shekhor Mohan Roy (#17)', team: 'home', type: 'Open Play' }
+      { minute: 64, scorer: 'Sajon Biswas (#9)', assist: 'Shekhor Mohan Ray (#17)', team: 'home', type: 'Open Play' }
     ],
     timeline: [
       { minute: 1, type: 'whistle', title: 'Kickoff', description: 'Grand Final underway under the floodlights at Daudpur Stadium.', team: 'neutral' },
       { minute: 19, type: 'save', title: 'World-Class Save', description: 'Shuronjit Biswas (#1) tips a fierce 20-yard volley over the crossbar.', player: 'Shuronjit Biswas', team: 'home' },
       { minute: 38, type: 'chance', title: 'Shuvo Hit Woodwork', description: 'Shuvo Roy (#7) cuts inside and rattles the crossbar from 18 yards.', player: 'Shuvo Roy', team: 'home' },
       { minute: 45, type: 'whistle', title: 'Half Time (0 - 0)', description: 'Deadlocked at the break with Titan Force dominating possession.', team: 'neutral' },
-      { minute: 64, type: 'goal', title: 'GOAL! 1 - 0 TITAN FORCE', description: 'Shekhor Mohan Roy picks out Sajon Biswas, who chips the advancing keeper cleanly!', player: 'Sajon Biswas', team: 'home' },
+      { minute: 64, type: 'goal', title: 'GOAL! 1 - 0 TITAN FORCE', description: 'Shekhor Mohan Ray picks out Sajon Biswas, who chips the advancing keeper cleanly!', player: 'Sajon Biswas', team: 'home' },
       { minute: 78, type: 'card', title: 'Yellow Card', description: 'Tactical foul by Srijon Roy (#3) stopping a dangerous counter-attack.', player: 'Srijon Roy', team: 'home' },
       { minute: 88, type: 'save', title: 'Point-Blank Save', description: 'Shuronjit Biswas dives low to deny a header from 6 yards out.', player: 'Shuronjit Biswas', team: 'home' },
       { minute: 90, type: 'whistle', title: 'Full Time & Trophy Presentation', description: 'Final whistle blows! Titan Force Mulikandi are crowned 2026 Champions!', team: 'neutral' }
@@ -869,7 +869,7 @@ export const MATCHES_DATA: Match[] = [
       starters: [
         { num: 1, name: 'Shuronjit Biswas', pos: 'GK' },
         { num: 4, name: 'Akash Roy', pos: 'LB' },
-        { num: 17, name: 'Shekhor Mohan Roy (C)', pos: 'CB' },
+        { num: 17, name: 'Shekhor Mohan Ray (C)', pos: 'CB' },
         { num: 5, name: 'Akash Roy', pos: 'CB' },
         { num: 3, name: 'Srijon Roy', pos: 'RB' },
         { num: 10, name: 'Tanvir Ahmed', pos: 'CDM' },
@@ -959,10 +959,10 @@ export const MATCHES_DATA: Match[] = [
     referee: 'Mustafa Ali',
     weather: '22°C, Evening Floodlights',
     pitchCondition: 'Good Grass',
-    manOfTheMatch: 'Shekhor Mohan Roy (#17)',
+    manOfTheMatch: 'Shekhor Mohan Ray (#17)',
     notes: 'Flawless clean sheet with dominant midfield display.',
     goals: [
-      { minute: 28, scorer: 'Shuvo Roy (#7)', assist: 'Shekhor Mohan Roy (#17)', team: 'home', type: 'Open Play' },
+      { minute: 28, scorer: 'Shuvo Roy (#7)', assist: 'Shekhor Mohan Ray (#17)', team: 'home', type: 'Open Play' },
       { minute: 73, scorer: 'Sajon Biswas (#9)', assist: 'Sojib Roy (#8)', team: 'home', type: 'Open Play' }
     ],
     stats: {
@@ -998,7 +998,7 @@ export const MATCHES_DATA: Match[] = [
     manOfTheMatch: 'Shuronjit Biswas (#1)',
     notes: 'Semi-final masterclass sealing qualification to the grand final.',
     goals: [
-      { minute: 41, scorer: 'Shekhor Mohan Roy (#17)', team: 'home', type: 'Free Kick' },
+      { minute: 41, scorer: 'Shekhor Mohan Ray (#17)', team: 'home', type: 'Free Kick' },
       { minute: 82, scorer: 'Kourov Chakroborty (#11)', assist: 'Srijon Roy (#3)', team: 'home', type: 'Open Play' }
     ],
     stats: {
@@ -1176,7 +1176,7 @@ export const PRODUCTS_DATA: Product[] = [
   {
     id: 'kit-17-shekhor',
     name: 'Titan Force Official Kit 17 - Shekhor Jersey',
-    description: 'Official match jersey worn by captain Shekhor Mohan Roy #17. Engineered with breathable moisture-wicking aerodynamic fabric, featuring the embroidered Titan Force crest, bold red-and-black gradient armor stripes, and premium sublimated numbering.',
+    description: 'Official match jersey worn by captain Shekhor Mohan Ray #17. Engineered with breathable moisture-wicking aerodynamic fabric, featuring the embroidered Titan Force crest, bold red-and-black gradient armor stripes, and premium sublimated numbering.',
     price: 499,
     currency: 'BDT',
     imageUrl: '/shop/kit-17-shekhor.png',

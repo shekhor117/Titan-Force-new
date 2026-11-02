@@ -14,7 +14,7 @@ export const StandingsSection: React.FC<StandingsSectionProps> = ({ lang }) => {
   const topAssists = [...PLAYERS_DATA].sort((a, b) => b.assists - a.assists).slice(0, 4);
 
   return (
-    <section id="standings" className="py-20 bg-neutral-950 border-b border-neutral-800">
+    <section id="standings" className="scroll-mt-28 sm:scroll-mt-32 py-16 sm:py-20 bg-neutral-950 border-b border-neutral-800 transition-colors">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}

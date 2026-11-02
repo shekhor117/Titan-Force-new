@@ -112,7 +112,7 @@ export const SquadSection: React.FC<SquadSectionProps> = ({
   };
 
   return (
-    <section id="squad" className="py-20 bg-neutral-950 border-b border-neutral-800">
+    <section id="squad" className="scroll-mt-28 sm:scroll-mt-32 py-16 sm:py-20 bg-neutral-950 border-b border-neutral-800 transition-colors">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
@@ -173,7 +173,7 @@ export const SquadSection: React.FC<SquadSectionProps> = ({
                     setInternalSelectedPlayer(player);
                   }
                 }}
-                className="group relative rounded-2xl bg-neutral-900/90 border border-neutral-800 hover:border-rose-600/60 transition-all duration-300 overflow-hidden cursor-pointer flex flex-col justify-between hover:shadow-2xl hover:shadow-rose-950/20"
+                className="group relative rounded-2xl bg-neutral-900/90 border border-neutral-800 card-interactive-glow overflow-hidden cursor-pointer flex flex-col justify-between"
               >
                 {/* Top Card Bar with Number & Role */}
                 <div className="p-4 flex items-center justify-between border-b border-neutral-800/80 z-10 bg-neutral-900/60 backdrop-blur-sm">

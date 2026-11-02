@@ -135,6 +135,22 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ lang }) => {
                 </a>
               </div>
             </div>
+
+            {/* Youth Academy & Player Trials Card with id="academy" */}
+            <div id="academy" className="p-6 rounded-2xl bg-gradient-to-br from-neutral-900 to-neutral-950 border border-neutral-800 space-y-3 scroll-mt-24">
+              <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-amber-400">
+                <CheckCircle2 className="w-4 h-4" />
+                <span>{lang === 'en' ? 'Youth Academy & Player Trials' : 'একাডেমি ও ট্রায়াল আবেদন'}</span>
+              </div>
+              <h4 className="font-display text-xl font-bold uppercase text-white">
+                {lang === 'en' ? 'Join Titan Force Football Academy' : 'টাইটান ফোর্স ফুটবল একাডেমি'}
+              </h4>
+              <p className="text-xs text-neutral-300 leading-relaxed">
+                {lang === 'en'
+                  ? 'We welcome promising young footballers aged 14–22 from Zakigonj and Sylhet for scouted trials at Mulikandi High School Ground. Submit your details or call our coaching desk directly.'
+                  : 'জকিগঞ্জ ও সিলেটের প্রতিশ্রুতিশীল অনূর্ধ্ব-২২ ফুটবলারদের জন্য মুলিকান্দি হাই স্কুল মাঠে নিয়মিত ট্রায়াল অনুষ্ঠিত হয়। নিচের ফর্মে বার্তা পাঠিয়ে সরাসরি আবেদন করুন।'}
+              </p>
+            </div>
           </div>
 
           {/* Right 7 Cols: Interactive Validated Message Form */}

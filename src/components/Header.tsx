@@ -60,8 +60,8 @@ export const Header: React.FC<HeaderProps> = ({
   }[] = [
     { id: 'home', label: lang === 'en' ? 'Home' : 'হোম', icon: <Home className="w-4 h-4" />, group: 'football' },
     { id: 'squad', label: t.nav.squad, icon: <Users className="w-4 h-4" />, group: 'football', badge: '12 Players' },
-    { id: 'matches', label: t.nav.fixtures, icon: <Calendar className="w-4 h-4" />, group: 'football', badge: 'Nov 15' },
     { id: 'tactics', label: lang === 'en' ? 'Tactics' : 'রণকৌশল', icon: <Crosshair className="w-4 h-4" />, group: 'football', badge: '5–11s' },
+    { id: 'matches', label: t.nav.fixtures, icon: <Calendar className="w-4 h-4" />, group: 'football', badge: 'Nov 15' },
     { id: 'standings', label: lang === 'en' ? 'Standings' : 'পয়েন্ট টেবিল', icon: <Trophy className="w-4 h-4" />, group: 'football', badge: '1st' },
     { id: 'trophies', label: t.nav.trophies, icon: <Trophy className="w-4 h-4" />, group: 'football', badge: '2026 🏆' },
     { id: 'store', label: t.nav.store, icon: <ShoppingBag className="w-4 h-4" />, group: 'fan', badge: '499 ৳' },

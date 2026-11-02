@@ -30,7 +30,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ lang }) => {
         <div className="mt-12 grid grid-cols-1 lg:grid-cols-12 gap-10 items-stretch">
           
           {/* Left 7 Cols: The Story and Philosophy */}
-          <div className="lg:col-span-7 space-y-6 flex flex-col justify-between">
+          <div id="history" className="lg:col-span-7 space-y-6 flex flex-col justify-between scroll-mt-24">
             <div className="space-y-4">
               <span className="text-xs font-mono uppercase tracking-wider text-rose-500">
                 01. {lang === 'en' ? 'The Brotherhood of Mulikandi' : 'মুলিকান্দির ভ্রাতৃত্ব'}
@@ -52,7 +52,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ lang }) => {
             </div>
 
             {/* Home Ground Spotlight Box */}
-            <div className="p-5 rounded-xl bg-neutral-900 border border-neutral-800 space-y-2">
+            <div id="stadium" className="p-5 rounded-xl bg-neutral-900 border border-neutral-800 space-y-2 scroll-mt-24">
               <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-rose-400">
                 <MapPin className="w-4 h-4" />
                 <span>{lang === 'en' ? 'Home Fortress' : 'ঘরের মাঠ'}</span>

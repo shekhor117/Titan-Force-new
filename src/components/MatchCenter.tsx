@@ -32,7 +32,7 @@ export const MatchCenter: React.FC<MatchCenterProps> = ({ lang, onViewFullMatch 
   };
 
   return (
-    <section id="matches" className="py-20 bg-neutral-950 border-b border-neutral-800">
+    <section id="matches" className="scroll-mt-28 sm:scroll-mt-32 py-16 sm:py-20 bg-neutral-950 border-b border-neutral-800 transition-colors">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
@@ -92,7 +92,7 @@ export const MatchCenter: React.FC<MatchCenterProps> = ({ lang, onViewFullMatch 
                     setMatchModalTab(match.editorialReport ? 'recap' : match.timeline ? 'timeline' : 'stats');
                   }
                 }}
-                className="group relative rounded-2xl bg-neutral-900/90 border border-neutral-800 hover:border-rose-600/60 transition-all p-5 flex flex-col justify-between cursor-pointer space-y-4 hover:shadow-2xl hover:shadow-rose-950/20"
+                className="group relative rounded-2xl bg-neutral-900/90 border border-neutral-800 card-interactive-glow p-5 flex flex-col justify-between cursor-pointer space-y-4"
               >
                 {/* Match Header: League & Date */}
                 <div className="flex items-center justify-between text-xs text-neutral-400 border-b border-neutral-800/80 pb-3">

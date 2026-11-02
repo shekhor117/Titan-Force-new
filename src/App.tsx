@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { Header } from './components/Header';
 import { Hero } from './components/Hero';
+import { ClubHighlightsStrip } from './components/ClubHighlightsStrip';
 import { HomePortalHub } from './components/HomePortalHub';
 import { PageHeaderBanner, PageView } from './components/PageHeaderBanner';
 import { SquadSection } from './components/SquadSection';
@@ -32,7 +33,7 @@ export default function App() {
   const [activePlayer, setActivePlayer] = useState<Player | null>(null);
   const [activeMatch, setActiveMatch] = useState<Match | null>(null);
 
-  // Theme state with localStorage persistence (dark vs vibrant gradient light)
+  // Theme state with localStorage persistence (dark vs light)
   const [theme, setTheme] = useState<'dark' | 'light'>(() => {
     try {
       const saved = localStorage.getItem('titan_theme');
@@ -95,12 +96,16 @@ export default function App() {
 
     if (validViews.includes(rawHash as PageView)) {
       setCurrentView(rawHash as PageView);
+      setActivePlayer(null);
+      setActiveMatch(null);
       window.scrollTo({ top: 0, behavior: 'smooth' });
       return;
     }
 
     // Default to home view if empty or unknown
     setCurrentView('home');
+    setActivePlayer(null);
+    setActiveMatch(null);
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }, []);
 
@@ -186,7 +191,7 @@ export default function App() {
           />
         )}
 
-        {/* 3. HOME VIEW (HERO + PORTAL DASHBOARD OF ALL SECTIONS) */}
+        {/* 3. STREAMLINED MINIMAL HOME VIEW (HERO + RECORD METRIC STRIP + PORTAL HUB) */}
         {currentView === 'home' && (
           <>
             <Hero
@@ -194,11 +199,13 @@ export default function App() {
               onNavigate={handleNavigate}
               onViewMatch={handleNavigateToMatch}
             />
+            <ClubHighlightsStrip
+              lang={lang}
+              onNavigate={handleNavigate}
+            />
             <HomePortalHub
               lang={lang}
               onNavigate={handleNavigate}
-              onNavigateToPlayer={handleNavigateToPlayer}
-              onNavigateToMatch={handleNavigateToMatch}
             />
           </>
         )}
@@ -264,7 +271,7 @@ export default function App() {
           </>
         )}
 
-        {/* 10. SEPARATE DIGITAL SUPPORTER PASS GENERATOR PAGE */}
+        {/* 10. SEPARATE FAN SUPPORTER PASS PAGE */}
         {currentView === 'member-pass' && (
           <>
             <PageHeaderBanner view="member-pass" lang={lang} onNavigate={handleNavigate} />
@@ -272,7 +279,7 @@ export default function App() {
           </>
         )}
 
-        {/* 11. SEPARATE CLUB NEWS WIRE PAGE */}
+        {/* 11. SEPARATE CLUB NEWS PAGE */}
         {currentView === 'news' && (
           <>
             <PageHeaderBanner view="news" lang={lang} onNavigate={handleNavigate} />
@@ -280,7 +287,7 @@ export default function App() {
           </>
         )}
 
-        {/* 12. SEPARATE ABOUT TITAN FORCE PAGE */}
+        {/* 12. SEPARATE ABOUT CLUB PAGE */}
         {currentView === 'about' && (
           <>
             <PageHeaderBanner view="about" lang={lang} onNavigate={handleNavigate} />
@@ -288,7 +295,7 @@ export default function App() {
           </>
         )}
 
-        {/* 13. SEPARATE CONTACT & MATCH DESK PAGE */}
+        {/* 13. SEPARATE CONTACT DESK PAGE */}
         {currentView === 'contact' && (
           <>
             <PageHeaderBanner view="contact" lang={lang} onNavigate={handleNavigate} />
@@ -298,7 +305,7 @@ export default function App() {
 
       </main>
 
-      {/* Footer with onNavigate for all section links */}
+      {/* Footer with smooth navigation */}
       <Footer
         lang={lang}
         onScrollToTop={handleScrollToTop}
@@ -308,4 +315,3 @@ export default function App() {
     </div>
   );
 }
-

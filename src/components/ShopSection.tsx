@@ -59,7 +59,7 @@ export const ShopSection: React.FC<ShopSectionProps> = ({ lang, cartOpen, setCar
   };
 
   return (
-    <section id="store" className="py-20 bg-neutral-950 border-b border-neutral-800">
+    <section id="store" className="scroll-mt-28 sm:scroll-mt-32 py-16 sm:py-20 bg-neutral-950 border-b border-neutral-800 transition-colors">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
@@ -213,10 +213,10 @@ export const ShopSection: React.FC<ShopSectionProps> = ({ lang, cartOpen, setCar
               <div
                 key={product.id}
                 onClick={() => setSelectedProduct(product)}
-                className={`p-5 rounded-xl border transition-all cursor-pointer flex items-center justify-between gap-4 ${
+                className={`p-5 rounded-xl border card-interactive-glow cursor-pointer flex items-center justify-between gap-4 ${
                   isSelected
-                    ? 'bg-neutral-900 border-rose-600'
-                    : 'bg-neutral-900/60 border-neutral-800 hover:border-neutral-700'
+                    ? 'bg-neutral-900 border-rose-600 shadow-[0_0_20px_rgba(244,63,94,0.3)]'
+                    : 'bg-neutral-900/60 border-neutral-800'
                 }`}
               >
                 <div className="flex items-center gap-4">

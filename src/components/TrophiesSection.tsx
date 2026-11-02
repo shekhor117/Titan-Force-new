@@ -12,7 +12,7 @@ export const TrophiesSection: React.FC<TrophiesSectionProps> = ({ lang }) => {
   const t = TRANSLATIONS[lang];
 
   return (
-    <section id="trophies" className="py-20 bg-neutral-950 border-b border-neutral-800">
+    <section id="trophies" className="scroll-mt-28 sm:scroll-mt-32 py-16 sm:py-20 bg-neutral-950 border-b border-neutral-800 transition-colors">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
@@ -30,7 +30,7 @@ export const TrophiesSection: React.FC<TrophiesSectionProps> = ({ lang }) => {
         </div>
 
         {/* Feature Bento Card: Championship Showcase */}
-        <div className="mt-12 rounded-2xl bg-neutral-900/90 border border-neutral-800 overflow-hidden shadow-2xl">
+        <div className="mt-12 rounded-2xl bg-neutral-900/90 border border-neutral-800 overflow-hidden shadow-2xl card-interactive-glow-amber">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-0 items-stretch">
             
             {/* Left 5 Cols: High-Fidelity Trophy Celebration Image */}

@@ -215,3 +215,46 @@
   background: #e11d48;
 }
 
+/* ========================================================
+   PREMIUM INTERACTIVE CARD SCALING & GLOWING BORDER
+   ======================================================== */
+.card-interactive-glow {
+  transition: transform 0.32s cubic-bezier(0.16, 1, 0.3, 1), 
+              box-shadow 0.32s cubic-bezier(0.16, 1, 0.3, 1), 
+              border-color 0.32s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform, box-shadow;
+}
+
+.card-interactive-glow:hover {
+  transform: translateY(-5px) scale(1.02);
+  border-color: rgba(244, 63, 94, 0.85) !important;
+  box-shadow: 0 20px 40px -10px rgba(225, 29, 72, 0.30), 
+              0 0 20px 1px rgba(244, 63, 94, 0.22);
+}
+
+.card-interactive-glow-amber {
+  transition: transform 0.32s cubic-bezier(0.16, 1, 0.3, 1), 
+              box-shadow 0.32s cubic-bezier(0.16, 1, 0.3, 1), 
+              border-color 0.32s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform, box-shadow;
+}
+
+.card-interactive-glow-amber:hover {
+  transform: translateY(-5px) scale(1.02);
+  border-color: rgba(245, 158, 11, 0.85) !important;
+  box-shadow: 0 20px 40px -10px rgba(245, 158, 11, 0.35), 
+              0 0 20px 1px rgba(245, 158, 11, 0.24);
+}
+
+/* Light Theme subtle glow intensity tuning */
+.theme-light .card-interactive-glow:hover {
+  box-shadow: 0 16px 32px -8px rgba(225, 29, 72, 0.22), 
+              0 0 16px 1px rgba(244, 63, 94, 0.16);
+}
+
+.theme-light .card-interactive-glow-amber:hover {
+  box-shadow: 0 16px 32px -8px rgba(245, 158, 11, 0.24), 
+              0 0 16px 1px rgba(245, 158, 11, 0.18);
+}
+
+

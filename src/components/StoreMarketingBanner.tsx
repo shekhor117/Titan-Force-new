@@ -84,7 +84,7 @@ export const StoreMarketingBanner: React.FC<StoreMarketingBannerProps> = ({ lang
 
                 <p className="text-sm sm:text-base text-neutral-300 max-w-2xl font-normal leading-relaxed">
                   {lang === 'en'
-                    ? 'Wear the colours of champions. Engineered with ultra-breathable moisture-wicking aerodynamic fabric, featuring the embroidered Titan Force crest and Captain Shekhor Mohan Roy’s iconic number 17.'
+                    ? 'Wear the colours of champions. Engineered with ultra-breathable moisture-wicking aerodynamic fabric, featuring the embroidered Titan Force crest and Captain Shekhor Mohan Ray’s iconic number 17.'
                     : 'চ্যাম্পিয়নদের পোশাকে নিজেকে সাজিয়ে নিন। আধুনিক বাতাস চলাচল উপযোগী টেকসই ফ্যাব্রিক এবং অধিনায়ক শেখর মোহন রায়ের আইকনিক ১৭ নম্বর সম্বলিত অফিশিয়াল ম্যাচ জার্সি।'}
                 </p>
               </div>
@@ -213,7 +213,7 @@ export const StoreMarketingBanner: React.FC<StoreMarketingBannerProps> = ({ lang
                 <ul className="space-y-1.5 list-disc list-inside text-neutral-300">
                   <li>{lang === 'en' ? 'Moisture-wicking dry-fit micro polyester fabric' : 'উচ্চমানের ড্রাই-ফিট মাইক্রো পলিয়েস্টার উপাদান'}</li>
                   <li>{lang === 'en' ? 'Embroidered high-definition Titan Force club badge' : 'হাই-ডেফিনিশন খচিত টাইটান ফোর্স ক্লাব ক্রেস্ট'}</li>
-                  <li>{lang === 'en' ? 'Captain Shekhor Mohan Roy official #17 rear print' : 'অধিনায়ক শেখর মোহন রায়ের অফিশিয়াল ১৭ নম্বর ব্যাক প্রিন্ট'}</li>
+                  <li>{lang === 'en' ? 'Captain Shekhor Mohan Ray official #17 rear print' : 'অধিনায়ক শেখর মোহন রায়ের অফিশিয়াল ১৭ নম্বর ব্যাক প্রিন্ট'}</li>
                   <li>{lang === 'en' ? 'Special gold celebratory star for Daudpur 2026 Championship' : 'দাউদপুর ২০২৬ চ্যাম্পিয়ন গোল্ডেন সেলিব্রেশন ব্যাজ'}</li>
                   <li>{lang === 'en' ? 'Sizes Available: S (36), M (38), L (40), XL (42), XXL (44)' : 'সাইজ সমূহ: S (৩৬), M (৩৮), L (৪০), XL (৪২), XXL (৪৪)'}</li>
                 </ul>

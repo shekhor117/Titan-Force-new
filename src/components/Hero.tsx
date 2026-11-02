@@ -70,7 +70,7 @@ export const Hero: React.FC<HeroProps> = ({
   };
 
   return (
-    <section className="relative overflow-hidden bg-neutral-950 border-b border-neutral-800 pt-8 pb-16 lg:pt-16 lg:pb-24 transition-colors">
+    <section className="relative overflow-hidden bg-neutral-950 border-b border-neutral-800 pt-6 pb-10 lg:pt-10 lg:pb-14 transition-colors">
       
       {/* 1. Atmospheric Stadium Background with Radiant Ambient Wash */}
       <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
@@ -89,7 +89,7 @@ export const Hero: React.FC<HeroProps> = ({
         <div className="absolute top-1/3 right-1/4 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl pointer-events-none" />
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8 lg:space-y-10">
         
         {/* 2. Top Kicker Badge Ribbon */}
         <div className="flex flex-wrap items-center justify-between gap-3 pb-2 border-b border-neutral-800/80">
@@ -161,7 +161,7 @@ export const Hero: React.FC<HeroProps> = ({
             {/* Subtitle Description */}
             <p className="text-sm sm:text-base text-neutral-300 max-w-xl font-normal leading-relaxed">
               {lang === 'en'
-                ? 'Home fortress at Mulikandi High School Ground. Led by Captain Shekhor Mohan Roy with an undefeated 88.9% tournament win rate and 4 clean sheets in 5 championship matches. Grassroots passion, elite football brotherhood.'
+                ? 'Home fortress at Mulikandi High School Ground. Led by Captain Shekhor Mohan Ray with an undefeated 88.9% tournament win rate and 4 clean sheets in 5 championship matches. Grassroots passion, elite football brotherhood.'
                 : 'মুলিকান্দি হাই স্কুল মাঠের অজেয় দুর্গ। অধিনায়ক শেখর মোহন রায়ের নেতৃত্বে ৮৮.৯% জয়ের অবিস্মরণীয় রেকর্ড ও অপরাজিত ট্রফি বিজয়ী টাইটানরা। তৃণমূল ফুটবল ঐতিহ্যের বিশ্বস্ত প্রতীক।'}
             </p>
 
